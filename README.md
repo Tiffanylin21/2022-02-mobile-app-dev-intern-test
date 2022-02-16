@@ -3,7 +3,7 @@
 ## Spec.
 
 - Users can see all to-do tasks sorted by due date with descending order in his/her to-do list.
-- Users can add/edit/remove to-do tasks.
+- Users can add/remove to-do tasks.
 - The following information is presented at each to-do task in the to-do list:
   - title: ex: See a doctor
   - description: ex: Take the Bus 123
