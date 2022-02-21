@@ -10,7 +10,9 @@
   - created date: ex: 2022/02/13
   - due date: ex: 2022/02/14
   - location coordinate where the task is added: ex: 25.0174719, 121.3662922
-  Thee data can be input by users.
+  
+  These data can be input by users.
+  
 - Users can add unlimited to-do tasks into his/her to-do list.
 - All added to-do tasks are stored in the app.
 - To-do list keeps up-to-date in realtime after a to-do task is added or removed.
