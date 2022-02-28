@@ -45,7 +45,7 @@ Please follow the requirement for your choice:
 
 ## Submit
 
-Submit your project by replying the interview email with the following information before 23:59:59 2022/02/25:
+Submit your project by replying the interview email with the following information before deadline:
 
 - The GitHub repo link to your implementation.
 
