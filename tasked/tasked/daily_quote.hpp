@@ -5,7 +5,7 @@
 
 #ifndef daily_quote_hpp
 #define daily_quote_hpp
-
+#pragma once
 #include <string>
 
 class DailyQuote {

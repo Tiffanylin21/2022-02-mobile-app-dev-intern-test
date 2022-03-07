@@ -4,6 +4,7 @@
 //
 
 #include "daily_quote.hpp"
+#include <iostream>
 #include <random>
 #include <array>
 
