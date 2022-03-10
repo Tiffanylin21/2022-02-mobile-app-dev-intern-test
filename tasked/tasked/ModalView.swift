@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ModalView: View {
     @EnvironmentObject var taskStore: TaskStore
@@ -13,7 +14,17 @@ struct ModalView: View {
     @State var title : String = ""
     @State var description : String = ""
     @State private var dueDate = Date.now
-    @State var location : Double?
+    @State var location : String = ""
+    @StateObject var locationManager = LocationManager()
+    
+    var userLatitude: String {
+        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+    }
+    
+    var userLongitude: String {
+        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+    }
+
     
     let wordColor: Color = Color(.sRGB, red: 243/255, green: 161/255, blue: 36/255)
     let boxColor: Color = Color(.sRGB, red: 243/255, green: 161/255, blue: 36/255)
@@ -23,12 +34,12 @@ struct ModalView: View {
         formatter.numberStyle = .decimal
         return formatter
     }()
-    
+        
     func reset() {
         self.title = ""
         self.description = ""
         self.dueDate = Date.now
-        self.location = nil
+        self.location = ""
     }
 
     func closeModal() {
@@ -37,18 +48,19 @@ struct ModalView: View {
     }
     
     func addNew() {
+        self.location = userLatitude + ", " + userLongitude
         let newTask: Task = Task(id: taskStore.total + 1,
                           title: title,
                           description: description,
                           dueDate: dueDate,
-                          location: location!)
+                          location: location)
         taskStore.addTask(task: newTask)
         reset()
         self.isShowing = false
     }
     
     func isValid() -> Bool {
-        return !(title.isEmpty || description.isEmpty || location == nil)
+        return !(title.isEmpty || description.isEmpty)
     }
     
     var body: some View {
@@ -77,9 +89,8 @@ struct ModalView: View {
                         Text("Location: ")
                             .font(.headline)
                             .fontWeight(.semibold)
-                        TextField("12.233...", value: self.$location, formatter: formatter)
-                            .keyboardType(.decimalPad)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        Text("latitude: \(userLatitude)")
+                        Text("longitude: \(userLongitude)")
                         Text("Due by: ")
                             .font(.headline)
                             .fontWeight(.semibold)

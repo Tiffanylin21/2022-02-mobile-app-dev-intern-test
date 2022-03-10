@@ -51,7 +51,7 @@ struct TaskCard: View {
                     .font(.body)
                     .foregroundColor(Color.lightWordColor)
                     .padding(.top, 1)
-                HStack(alignment: .center) {
+                VStack(alignment: .leading) {
                     Chip(color: Color.locationRed, content: String(task.location), icon: "map")
                     Chip(color: Color.orange, content: convertDate(date: task.dueDate), icon: "clock")
                 }

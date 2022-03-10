@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8529EE9927D906B800485138 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529EE9827D906B800485138 /* LocationManager.swift */; };
 		8554C88027D637FE00DB8E3E /* CPP-Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8554C87F27D637FE00DB8E3E /* CPP-Wrapper.mm */; };
 		85644AFF27D197DF00E72680 /* TaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85644AFE27D197DF00E72680 /* TaskCard.swift */; };
 		8596C90E27CF9CB50016B830 /* taskedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8596C90D27CF9CB50016B830 /* taskedApp.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8529EE9827D906B800485138 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		8554C87E27D6377500DB8E3E /* CPP-Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPP-Wrapper.h"; sourceTree = "<group>"; };
 		8554C87F27D637FE00DB8E3E /* CPP-Wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CPP-Wrapper.mm"; sourceTree = "<group>"; };
 		8554C88327D63EBC00DB8E3E /* tasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "tasked-Bridging-Header.h"; path = "tasked/tasked-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -124,12 +126,12 @@
 				85CCA79127D62D6100B3D18F /* daily_quote.hpp */,
 				8554C87E27D6377500DB8E3E /* CPP-Wrapper.h */,
 				8554C87F27D637FE00DB8E3E /* CPP-Wrapper.mm */,
-				85CCA79527D62D7D00B3D18F /* DailyQuote */,
 				85D0AAD027D2136600F4FB4E /* Chip.swift */,
 				85CCA78927D5A0D600B3D18F /* ChipButtonStyle.swift */,
 				85CCA78D27D6291700B3D18F /* Colors.swift */,
 				8596C93727CFAD6A0016B830 /* Task.swift */,
 				85644AFE27D197DF00E72680 /* TaskCard.swift */,
+				8529EE9827D906B800485138 /* LocationManager.swift */,
 				85EAC94B27D43BA100502A5D /* TaskStore.swift */,
 				85EAC94D27D43F3E00502A5D /* ModalView.swift */,
 				85CCA78B27D603B300B3D18F /* DeleteView.swift */,
@@ -162,13 +164,6 @@
 				8596C92A27CF9CBD0016B830 /* taskedUITestsLaunchTests.swift */,
 			);
 			path = taskedUITests;
-			sourceTree = "<group>";
-		};
-		85CCA79527D62D7D00B3D18F /* DailyQuote */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DailyQuote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +309,7 @@
 				85D0AAD127D2136600F4FB4E /* Chip.swift in Sources */,
 				8596C90E27CF9CB50016B830 /* taskedApp.swift in Sources */,
 				8554C88027D637FE00DB8E3E /* CPP-Wrapper.mm in Sources */,
+				8529EE9927D906B800485138 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +473,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"tasked/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable location services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,6 +505,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"tasked/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Enable location services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
